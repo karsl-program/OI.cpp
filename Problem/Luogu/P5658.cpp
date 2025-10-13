@@ -15,7 +15,7 @@ void dfs(int u) {
         if (top) tmp = stk[top --], f[u] = f[fa[tmp]] + 1;
     }
     pre[u] = pre[fa[u]] + f[u];
-    for (int v : g[u]) dfs(v);
+    for (int v : g[u]) dfs (v);
     if (tmp) stk[++ top] = tmp;
     else if (top) -- top;
 }
@@ -26,10 +26,10 @@ namespace RunCode {
         for (int i = 2; i <= n; i ++) {
             int fai;
             std :: cin >> fai;
-            g[fai].push_back(i);
+            g[fai].push_back (i);
             fa[i] = fai;
         }
-        dfs(1);
+        dfs (1);
         int ans = 0;
         for (int i = 1; i <= n; i ++) {
             ans ^= i * pre[i];
