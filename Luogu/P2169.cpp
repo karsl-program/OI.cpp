@@ -51,7 +51,7 @@ namespace RunCode {
         while (!q.empty ()) {
             int x = q.top ().to;
             q.pop ();
-            if (dis[x] != q.top ().to) {
+            if (dis[x] != q.top ().w) {
                 continue;
             }
             for (int i = 0; i < g[x].size (); i ++) {
