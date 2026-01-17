@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define int long long
 
 constexpr int N = 2e5 + 5, M = 1e6 + 5;
 int low[N], dfn[N], instk[N], stk[N], top, scc[N], scnt, times;
@@ -44,14 +45,14 @@ namespace RunCode {
     }
 
     void dij (int s) {
-        std :: memset (dis, 0x3f, sizeof (dis));
+        std :: memset (dis, 0x7f, sizeof (dis));
         dis[s] = 0;
         std :: priority_queue <Node> q;
         q.push ({0, s});
         while (!q.empty ()) {
-            int x = q.top ().to;
+            int x = q.top ().to, w = q.top ().w;
             q.pop ();
-            if (dis[x] != q.top ().w) {
+            if (dis[x] != w) {
                 continue;
             }
             for (int i = 0; i < g[x].size (); i ++) {
@@ -91,7 +92,7 @@ namespace RunCode {
     }
 }
 
-int main () {
+signed main () {
     std :: ios :: sync_with_stdio (false);
     std :: cin.tie (0);
     std :: cout.tie (0);
