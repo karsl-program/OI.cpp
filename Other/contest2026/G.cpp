@@ -1,15 +1,13 @@
 #include <bits/stdc++.h>
-
-#define define undef
+#define int long long
 
 namespace RunCode {
     void solve () {
-        int undef = 0;
-        std :: cout << define;
+
     }
 }
 
-int main () {
+signed main () {
     RunCode :: solve ();
 
     return 0;
